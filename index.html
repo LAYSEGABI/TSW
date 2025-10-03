@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techstars Startup Weekend Saúde | Florianópolis</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00d1e6',
+                        'brand-secondary': '#091530',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-montserrat">
+
+    <header id="header"
+    class="bg-brand-secondary/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center">
+            <img src="img/logo.png" alt="Logo SW Saúde Floripa" class="h-10 md:h-12 w-auto">
+        </a>
+
+        <div class="flex items-center space-x-8">
+            <nav class="hidden md:flex space-x-8">
+                <a href="#sobre" class="text-gray-300 hover:text-brand-primary transition">O Evento</a>
+                <a href="#cronograma" class="text-gray-300 hover:text-brand-primary transition">Agenda</a>
+                <a href="#organizadores" class="text-gray-300 hover:text-brand-primary transition">Organizadores</a>
+                <a href="#faq" class="text-gray-300 hover:text-brand-primary transition">FAQ</a>
+            </nav>
+            <a href="#ingressos"
+                class="hidden md:block bg-brand-primary text-brand-secondary font-bold py-2 px-5 rounded-full text-sm uppercase hover:bg-white hover:text-brand-secondary transition-colors duration-300">
+                Garanta seu ingresso
+            </a>
+        </div>
+
+        <!-- Botão Mobile -->
+        <button id="mobile-menu-button" class="md:hidden text-white">
+            <i data-lucide="menu"></i>
+        </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-secondary">
+        <a href="#sobre"
+            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">O Evento</a>
+        <a href="#cronograma"
+            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Agenda</a>
+        <a href="#organizadores"
+            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Organizadores</a>
+        <a href="#ingressos"
+            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Ingressos</a>
+        <a href="#faq"
+            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">FAQ</a>
+    </div>
+</header>
+
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="inicio"
+            class="relative min-h-screen flex items-center justify-center text-white text-center bg-cover bg-center"
+            style="background-image: url('img/banner.png');">
+            <div class="absolute inset-0 bg-brand-secondary opacity-60"></div>
+            <div class="relative z-10 p-6 flex flex-col items-center">
+                <h1 data-aos="fade-down" class="text-4xl md:text-6xl font-black uppercase text-shadow mb-4">Transforme
+                    suas ideias em startups em 54 horas</h1>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-2xl mb-8 max-w-3xl text-shadow">
+                    Participe do Techstars Startup Weekend Saúde em Florianópolis – de 15 a 17 de Novembro de 2025.</p>
+                <div id="countdown" data-aos="fade-up" data-aos-delay="400"
+                    class="flex justify-center space-x-4 md:space-x-8 my-8">
+                    <div><span id="days" class="text-4xl md:text-6xl font-bold">00</span>
+                        <p class="text-sm uppercase text-brand-primary">Dias</p>
+                    </div>
+                    <div><span id="hours" class="text-4xl md:text-6xl font-bold">00</span>
+                        <p class="text-sm uppercase text-brand-primary">Horas</p>
+                    </div>
+                    <div><span id="minutes" class="text-4xl md:text-6xl font-bold">00</span>
+                        <p class="text-sm uppercase text-brand-primary">Minutos</p>
+                    </div>
+                    <div><span id="seconds" class="text-4xl md:text-6xl font-bold">00</span>
+                        <p class="text-sm uppercase text-brand-primary">Segundos</p>
+                    </div>
+                </div>
+                <a data-aos="fade-up" data-aos-delay="600" href="#ingressos"
+                    class="bg-brand-primary text-brand-secondary font-bold py-3 px-8 rounded-full text-lg uppercase hover:scale-105 transition-transform duration-300">Garanta
+                    seu ingresso</a>
+            </div>
+        </section>
+
+        <!-- 2. Sobre o Evento (Atualizado) -->
+        <section id="sobre" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-brand-secondary mb-6">O que é o
+                        Techstars Startup Weekend?</h2>
+                    <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-600 leading-relaxed">
+                        O Techstars Startup Weekend é uma experiência única de imersão de 54 horas onde você e outras
+                        pessoas apaixonadas por inovação se unem para transformar ideias em negócios. Durante o final de
+                        semana, os participantes formam times, validam ideias, recebem apoio de mentores e desenvolvem
+                        protótipos que podem se tornar startups reais.
+                    </p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+                    <img src="img/img3.png"
+                        alt="Foto de evento passado" class="rounded-lg object-cover w-full h-full">
+                    <img src="img/img1.png"
+                        class="rounded-lg object-cover w-full h-full">
+                    <img src="img/img2.png"
+                        alt="Foto de apresentação" class="rounded-lg object-cover w-full h-full">
+                </div>
+
+                <div data-aos="fade-up"
+                    class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-16 max-w-5xl mx-auto">
+                    <div class="p-4">
+                        <p class="text-4xl md:text-5xl font-bold text-brand-primary">7K+</p>
+                        <p class="text-brand-secondary mt-2">Programas realizados</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-4xl md:text-5xl font-bold text-brand-primary">150+</p>
+                        <p class="text-brand-secondary mt-2">Países</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-4xl md:text-5xl font-bold text-brand-primary">19K+</p>
+                        <p class="text-brand-secondary mt-2">Líderes de comunidade</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-4xl md:text-5xl font-bold text-brand-primary">428K+</p>
+                        <p class="text-brand-secondary mt-2">Participantes no mundo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Vertical Saúde (Atualizado) -->
+        <section id="vertical" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-up">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-secondary mb-6">Por que Saúde?</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Nesta edição, vamos mergulhar nos desafios e oportunidades do setor da saúde. Desde soluções
+                            digitais para hospitais até iniciativas de bem-estar e saúde mental, o objetivo é cocriar
+                            soluções que impactem diretamente a vida das pessoas. Se você sonha em transformar o futuro
+                            da saúde, este é o lugar certo.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" class="grid grid-cols-2 gap-4">
+                        <img src="img/img4.png"
+                            class="rounded-lg shadow-md">
+                        <img src="img/img5.png"
+                            class="rounded-lg shadow-md mt-8">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Cronograma (Atualizado) -->
+        <section id="cronograma" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center max-w-6xl">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-brand-secondary mb-12">Agenda do Final
+                    de Semana</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div data-aos="fade-up" class="bg-white p-6 rounded-xl border border-gray-200">
+                        <h3 class="font-bold text-2xl text-brand-secondary mb-4 border-b-2 border-brand-primary pb-2">
+                            Sexta-feira</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><strong>18:00:</strong> Credenciamento e Boas-vindas</li>
+                            <li><strong>19:00:</strong> Jantar e Networking</li>
+                            <li><strong>20:00:</strong> Pitches Iniciais (1 minuto por ideia)</li>
+                            <li><strong>21:00:</strong> Votação e Formação de Equipes</li>
+                            <li><strong>22:00:</strong> Início do Trabalho!</li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-6 rounded-xl border border-gray-200">
+                        <h3 class="font-bold text-2xl text-brand-secondary mb-4 border-b-2 border-brand-primary pb-2">
+                            Sábado</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><strong>09:00:</strong> Café da Manhã</li>
+                            <li><strong>10:00:</strong> Mentorias e Desenvolvimento</li>
+                            <li><strong>13:00:</strong> Almoço</li>
+                            <li><strong>14:00:</strong> Validação de Mercado e Prototipação</li>
+                            <li><strong>19:00:</strong> Jantar</li>
+                            <li><strong>20:00:</strong> Foco no Desenvolvimento</li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400" class="bg-white p-6 rounded-xl border border-gray-200">
+                        <h3 class="font-bold text-2xl text-brand-secondary mb-4 border-b-2 border-brand-primary pb-2">
+                            Domingo</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><strong>09:00:</strong> Café da Manhã</li>
+                            <li><strong>10:00:</strong> Preparação do Pitch Final</li>
+                            <li><strong>13:00:</strong> Almoço</li>
+                            <li><strong>14:00:</strong> Ensaio Técnico</li>
+                            <li><strong>17:00:</strong> Apresentações Finais</li>
+                            <li><strong>19:00:</strong> Premiação e Encerramento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <section id="organizadores" class="py-20 md:py-28">
+    <div class="container mx-auto px-6">
+        <!-- Título -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-brand-secondary mb-6">
+                Nossa Equipe Organizadora
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-600">
+                Conheça os voluntários que tornam este evento possível.
+            </p>
+        </div>
+
+        <!-- Grid de organizadores -->
+        <div data-aos="fade-up" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            
+            <!-- Card Organizador -->
+            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="relative w-32 h-32 mx-auto mb-4">
+                    <img src="img/Hugo.png"
+                        class="w-32 h-32 rounded-full object-cover">
+                    <!-- Botão LinkedIn flutuante -->
+                    <a href="#" target="_blank"
+                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                    </a>
+                </div>
+                <h3 class="font-bold text-lg text-brand-secondary">Hugo</h3>
+                <p class="text-gray-500 mb-3">Organização</p>
+            </div>
+
+            <!-- Clone dos cards -->
+            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="relative w-32 h-32 mx-auto mb-4">
+                    <img src="img/Bruno.png"
+                        class="w-32 h-32 rounded-full object-cover">
+                    <a href="#" target="_blank"
+                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                    </a>
+                </div>
+                <h3 class="font-bold text-lg text-brand-secondary">Bruno</h3>
+                <p class="text-gray-500 mb-3">Organização</p>
+            </div>
+
+            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="relative w-32 h-32 mx-auto mb-4">
+                    <img src="img/Layse.png"
+                        class="w-32 h-32 rounded-full object-cover">
+                    <a href="#" target="_blank"
+                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                    </a>
+                </div>
+                <h3 class="font-bold text-lg text-brand-secondary">Layse</h3>
+                <p class="text-gray-500 mb-3">Design</p>
+            </div>
+
+            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="relative w-32 h-32 mx-auto mb-4">
+                    <img src="img/Luisa.png"
+                        class="w-32 h-32 rounded-full object-cover">
+                    <a href="#" target="_blank"
+                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                    </a>
+                </div>
+                <h3 class="font-bold text-lg text-brand-secondary">Luísa</h3>
+                <p class="text-gray-500 mb-3">Design</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Garanta seu Ingresso -->
+        <section id="ingressos" class="py-20 md:py-28 bg-brand-secondary text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-12">
+                    Garanta seu Ingresso
+                </h2>
+
+                <div class="max-w-4xl mx-auto bg-white/10 p-8 md:p-12 rounded-xl">
+                    <h3 data-aos="fade-up" class="text-2xl font-bold text-brand-primary mb-10 text-center">
+                        O que o ingresso contempla?
+                    </h3>
+
+                    <!-- grid com 2 colunas -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-lg">
+                        <!-- Alimentação -->
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-utensils text-brand-primary text-2xl mr-4 mt-1"></i>
+                            <span>Alimentação (para os três dias!!)</span>
+                        </div>
+
+                        <!-- Kit -->
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="150">
+                            <i class="fas fa-gift text-brand-primary text-2xl mr-4 mt-1"></i>
+                            <span>Kit do participante</span>
+                        </div>
+
+                        <!-- Mentorias -->
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-chalkboard-teacher text-brand-primary text-2xl mr-4 mt-1"></i>
+                            <span>Mentorias com profissionais TOPs nas áreas de Negócios, Criação e
+                                Tecnologia</span>
+                        </div>
+
+                        <!-- Networking -->
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="250">
+                            <i class="fas fa-users text-brand-primary text-2xl mr-4 mt-1"></i>
+                            <span>Networking de qualidade (pessoas já saíram contratadas de
+                                SWs)</span>
+                        </div>
+
+                        <!-- Aprendizado -->
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-lightbulb text-brand-primary text-2xl mr-4 mt-1"></i>
+                            <span>Aprendizado (metodologia que você poderá levar para a sua vida
+                                profissional)</span>
+                        </div>
+
+                        <!-- Brindezinhos -->
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="350">
+                            <i class="fas fa-smile-beam text-brand-primary text-2xl mr-4 mt-1"></i>
+                            <span>Brindezinhos &lt;3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <a data-aos="fade-up" data-aos-delay="400" href="#"
+                    class="mt-12 bg-brand-primary text-brand-secondary font-bold py-4 px-10 rounded-full text-xl uppercase hover:scale-105 transition-transform duration-300 inline-block">Quero
+                    participar</a>
+            </div>
+        </section>
+
+
+        <!-- 8. FAQ -->
+        <section id="faq" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-brand-secondary mb-12 text-center">
+                    Perguntas Frequentes</h2>
+                <div class="space-y-4">
+                    <div data-aos="fade-up" class="border-b border-gray-200 pb-4">
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center font-bold text-lg cursor-pointer text-brand-secondary list-none">
+                                Preciso ter uma ideia pronta?<span class="transition group-open:rotate-180"><i
+                                        data-lucide="chevron-down"></i></span></summary>
+                            <p class="text-gray-600 mt-3 group-open:animate-fadeIn">Não, você pode vir apenas com
+                                vontade de participar e aprender. Haverá um momento para quem tem ideias apresentá-las e
+                                para que as equipes se formem em torno das mais votadas.</p>
+                        </details>
+                    </div>
+                    <div data-aos="fade-up" class="border-b border-gray-200 pb-4">
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center font-bold text-lg cursor-pointer text-brand-secondary list-none">
+                                Quem pode participar?<span class="transition group-open:rotate-180"><i
+                                        data-lucide="chevron-down"></i></span></summary>
+                            <p class="text-gray-600 mt-3 group-open:animate-fadeIn">Pessoas de todas as áreas:
+                                desenvolvedores, designers, profissionais de saúde, estudantes, empreendedores e
+                                curiosos. A diversidade de habilidades é o que torna o evento tão rico.</p>
+                        </details>
+                    </div>
+                    <div data-aos="fade-up" class="border-b border-gray-200 pb-4">
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center font-bold text-lg cursor-pointer text-brand-secondary list-none">
+                                O que está incluso no ingresso?<span class="transition group-open:rotate-180"><i
+                                        data-lucide="chevron-down"></i></span></summary>
+                            <p class="text-gray-600 mt-3 group-open:animate-fadeIn">Todas as refeições durante o evento
+                                (café da manhã, almoço, jantar e lanches), acesso a mentorias com especialistas,
+                                material de apoio, camiseta do evento e muito networking de qualidade.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-brand-secondary text-gray-300 py-6 text-center">
+        <p>&copy; 2025 Techstars Startup Weekend Saúde Floripa. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts externos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
