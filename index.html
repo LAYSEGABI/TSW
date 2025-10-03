@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techstars Startup Weekend Saúde | Florianópolis</title>
 
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:title" content="Techstars Startup Weekend Saúde | Florianópolis">
+    <meta property="og:description"
+        content="Transforme suas ideias em startups em apenas 54 horas. Participe do maior evento de empreendedorismo em saúde em Floripa, de 15 a 17 de Novembro de 2025.">
+    <meta property="og:image" content="https://seudominio.com/img/banner.png"> <!-- imagem de 1200x630 recomendado -->
+    <meta property="og:url" content="https://tsw-gamma.vercel.app/">
+<meta property="og:image" content="https://tsw-gamma.vercel.app/img/banner.png">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Techstars Startup Weekend Saúde | Florianópolis">
+    <meta name="twitter:description" content="Transforme suas ideias em startups em apenas 54 horas.">
+    <meta name="twitter:image" content="https://seudominio.com/img/banner.png">
+
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -46,47 +62,48 @@
 <body class="bg-white font-montserrat">
 
     <header id="header"
-    class="bg-brand-secondary/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        
-        <!-- Logo -->
-        <a href="#inicio" class="flex items-center">
-            <img src="img/logo.png" alt="Logo SW Saúde Floripa" class="h-10 md:h-12 w-auto">
-        </a>
+        class="bg-brand-secondary/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
 
-        <div class="flex items-center space-x-8">
-            <nav class="hidden md:flex space-x-8">
-                <a href="#sobre" class="text-gray-300 hover:text-brand-primary transition">O Evento</a>
-                <a href="#cronograma" class="text-gray-300 hover:text-brand-primary transition">Agenda</a>
-                <a href="#organizadores" class="text-gray-300 hover:text-brand-primary transition">Organizadores</a>
-                <a href="#faq" class="text-gray-300 hover:text-brand-primary transition">FAQ</a>
-            </nav>
-            <a href="#ingressos"
-                class="hidden md:block bg-brand-primary text-brand-secondary font-bold py-2 px-5 rounded-full text-sm uppercase hover:bg-white hover:text-brand-secondary transition-colors duration-300">
-                Garanta seu ingresso
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center">
+                <img src="img/logo.png" alt="Logo SW Saúde Floripa" class="h-10 md:h-12 w-auto">
             </a>
+
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="text-gray-300 hover:text-brand-primary transition">O Evento</a>
+                    <a href="#cronograma" class="text-gray-300 hover:text-brand-primary transition">Agenda</a>
+                    <a href="#organizadores" class="text-gray-300 hover:text-brand-primary transition">Organizadores</a>
+                    <a href="#faq" class="text-gray-300 hover:text-brand-primary transition">FAQ</a>
+                </nav>
+                <a href="#ingressos"
+                    class="hidden md:block bg-brand-primary text-brand-secondary font-bold py-2 px-5 rounded-full text-sm uppercase hover:bg-white hover:text-brand-secondary transition-colors duration-300">
+                    Garanta seu ingresso
+                </a>
+            </div>
+
+            <!-- Botão Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
 
-        <!-- Botão Mobile -->
-        <button id="mobile-menu-button" class="md:hidden text-white">
-            <i data-lucide="menu"></i>
-        </button>
-    </div>
-
-    <!-- Menu Mobile -->
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-secondary">
-        <a href="#sobre"
-            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">O Evento</a>
-        <a href="#cronograma"
-            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Agenda</a>
-        <a href="#organizadores"
-            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Organizadores</a>
-        <a href="#ingressos"
-            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Ingressos</a>
-        <a href="#faq"
-            class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">FAQ</a>
-    </div>
-</header>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-secondary">
+            <a href="#sobre"
+                class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">O
+                Evento</a>
+            <a href="#cronograma"
+                class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Agenda</a>
+            <a href="#organizadores"
+                class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Organizadores</a>
+            <a href="#ingressos"
+                class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">Ingressos</a>
+            <a href="#faq"
+                class="block text-center py-2 px-4 text-sm text-gray-300 hover:bg-brand-primary hover:text-brand-secondary">FAQ</a>
+        </div>
+    </header>
 
 
     <!-- Conteúdo principal -->
@@ -117,7 +134,7 @@
                     </div>
                 </div>
                 <a data-aos="fade-up" data-aos-delay="600" href="#ingressos"
-                    class="bg-brand-primary text-brand-secondary font-bold py-3 px-8 rounded-full text-lg uppercase hover:scale-105 transition-transform duration-300">Garanta
+                    class="bg-brand-primary text-brand-secondary font-bold py-3 px-8 rounded-full text-lg uppercase  hover:bg-white hover:text-brand-secondary transition-colors duration-500">Garanta
                     seu ingresso</a>
             </div>
         </section>
@@ -137,12 +154,9 @@
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="300" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
-                    <img src="img/img3.png"
-                        alt="Foto de evento passado" class="rounded-lg object-cover w-full h-full">
-                    <img src="img/img1.png"
-                        class="rounded-lg object-cover w-full h-full">
-                    <img src="img/img2.png"
-                        alt="Foto de apresentação" class="rounded-lg object-cover w-full h-full">
+                    <img src="img/img3.png" alt="Foto de evento passado" class="rounded-lg object-cover w-full h-full">
+                    <img src="img/img1.png" class="rounded-lg object-cover w-full h-full">
+                    <img src="img/img2.png" alt="Foto de apresentação" class="rounded-lg object-cover w-full h-full">
                 </div>
 
                 <div data-aos="fade-up"
@@ -181,10 +195,8 @@
                         </p>
                     </div>
                     <div data-aos="fade-up" class="grid grid-cols-2 gap-4">
-                        <img src="img/img4.png"
-                            class="rounded-lg shadow-md">
-                        <img src="img/img5.png"
-                            class="rounded-lg shadow-md mt-8">
+                        <img src="img/img4.png" class="rounded-lg shadow-md">
+                        <img src="img/img5.png" class="rounded-lg shadow-md mt-8">
                     </div>
                 </div>
             </div>
@@ -235,78 +247,74 @@
             </div>
         </section>
 
-      <section id="organizadores" class="py-20 md:py-28">
-    <div class="container mx-auto px-6">
-        <!-- Título -->
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-brand-secondary mb-6">
-                Nossa Equipe Organizadora
-            </h2>
-            <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-600">
-                Conheça os voluntários que tornam este evento possível.
-            </p>
-        </div>
-
-        <!-- Grid de organizadores -->
-        <div data-aos="fade-up" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            
-            <!-- Card Organizador -->
-            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-                <div class="relative w-32 h-32 mx-auto mb-4">
-                    <img src="img/Hugo.png"
-                        class="w-32 h-32 rounded-full object-cover">
-                    <!-- Botão LinkedIn flutuante -->
-                    <a href="#" target="_blank"
-                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
-                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
-                    </a>
+        <section id="organizadores" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <!-- Título -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-brand-secondary mb-6">
+                        Nossa Equipe Organizadora
+                    </h2>
+                    <p data-aos="fade-up" data-aos-delay="200" class="text-lg text-gray-600">
+                        Conheça os voluntários que tornam este evento possível.
+                    </p>
                 </div>
-                <h3 class="font-bold text-lg text-brand-secondary">Hugo</h3>
-                <p class="text-gray-500 mb-3">Organização</p>
-            </div>
 
-            <!-- Clone dos cards -->
-            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-                <div class="relative w-32 h-32 mx-auto mb-4">
-                    <img src="img/Bruno.png"
-                        class="w-32 h-32 rounded-full object-cover">
-                    <a href="#" target="_blank"
-                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
-                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
-                    </a>
-                </div>
-                <h3 class="font-bold text-lg text-brand-secondary">Bruno</h3>
-                <p class="text-gray-500 mb-3">Organização</p>
-            </div>
+                <!-- Grid de organizadores -->
+                <div data-aos="fade-up" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-                <div class="relative w-32 h-32 mx-auto mb-4">
-                    <img src="img/Layse.png"
-                        class="w-32 h-32 rounded-full object-cover">
-                    <a href="#" target="_blank"
-                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
-                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
-                    </a>
-                </div>
-                <h3 class="font-bold text-lg text-brand-secondary">Layse</h3>
-                <p class="text-gray-500 mb-3">Design</p>
-            </div>
+                    <!-- Card Organizador -->
+                    <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                        <div class="relative w-32 h-32 mx-auto mb-4">
+                            <img src="img/Hugo.png" class="w-32 h-32 rounded-full object-cover">
+                            <!-- Botão LinkedIn flutuante -->
+                            <a href="#" target="_blank"
+                                class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                            </a>
+                        </div>
+                        <h3 class="font-bold text-lg text-brand-secondary">Hugo</h3>
+                        <p class="text-gray-500 mb-3">Organização</p>
+                    </div>
 
-            <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
-                <div class="relative w-32 h-32 mx-auto mb-4">
-                    <img src="img/Luisa.png"
-                        class="w-32 h-32 rounded-full object-cover">
-                    <a href="#" target="_blank"
-                        class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
-                        <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
-                    </a>
+                    <!-- Clone dos cards -->
+                    <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                        <div class="relative w-32 h-32 mx-auto mb-4">
+                            <img src="img/Bruno.png" class="w-32 h-32 rounded-full object-cover">
+                            <a href="#" target="_blank"
+                                class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                            </a>
+                        </div>
+                        <h3 class="font-bold text-lg text-brand-secondary">Bruno</h3>
+                        <p class="text-gray-500 mb-3">Organização</p>
+                    </div>
+
+                    <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                        <div class="relative w-32 h-32 mx-auto mb-4">
+                            <img src="img/Layse.png" class="w-32 h-32 rounded-full object-cover">
+                            <a href="#" target="_blank"
+                                class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                            </a>
+                        </div>
+                        <h3 class="font-bold text-lg text-brand-secondary">Layse</h3>
+                        <p class="text-gray-500 mb-3">Design</p>
+                    </div>
+
+                    <div class="text-center bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+                        <div class="relative w-32 h-32 mx-auto mb-4">
+                            <img src="img/Luisa.png" class="w-32 h-32 rounded-full object-cover">
+                            <a href="#" target="_blank"
+                                class="absolute bottom-0 right-0 bg-white rounded-full p-1 shadow hover:bg-brand-primary transition">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-brand-secondary hover:text-white"></i>
+                            </a>
+                        </div>
+                        <h3 class="font-bold text-lg text-brand-secondary">Luísa</h3>
+                        <p class="text-gray-500 mb-3">Design</p>
+                    </div>
                 </div>
-                <h3 class="font-bold text-lg text-brand-secondary">Luísa</h3>
-                <p class="text-gray-500 mb-3">Design</p>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
